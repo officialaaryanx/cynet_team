@@ -37,7 +37,7 @@
 ::-webkit-scrollbar-track { background: #000; }
 ::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 4px; box-shadow: 0 0 10px var(--cyan-glow); }
 
-/* Body & Background */
+/* Body & Background - FIXED TO MATCH EVENTS DASHBOARD */
 body {
   background: #03050c;
   background-image:
@@ -46,6 +46,7 @@ body {
     linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px);
   background-size: 200% 200%, 200% 200%, 30px 30px, 30px 30px;
+  background-attachment: fixed; /* Ensures background stays pinned during long scrolls */
   color: var(--cyan);
   font-family: 'Orbitron', sans-serif;
   min-height: 100vh;
@@ -61,11 +62,12 @@ body {
 /* Layout */
 .main-container {
   max-width: 1800px;
-  margin: 80px auto;          /* reduced top/bottom margin a bit */
+  margin: 80px auto;
   padding: 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: transparent; /* Ensures it doesn't block the body background */
 }
 
 .events-grid {
