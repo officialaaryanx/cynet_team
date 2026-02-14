@@ -83,7 +83,7 @@ const groupByPosition = (profiles) => {
 // Position order for display
 const positionOrder = ["President", "Vice President", "Secretary", "Director", "Assistant Director"];
 
-function team() {
+function Team() {
   const groupedProfiles = groupByPosition(profiles);
 
   // Get color class based on position
@@ -155,5 +155,4 @@ function team() {
   );
 }
 
-export default team;
-
+export default Team;
