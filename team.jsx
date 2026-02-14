@@ -1,5 +1,5 @@
 import React from "react";
-import "./CynetTerminal.css";
+import "./team.css";
 import { useGlitchText } from "./hooks/useGlitchText";
 
 // Random team names generator
@@ -83,7 +83,7 @@ const groupByPosition = (profiles) => {
 // Position order for display
 const positionOrder = ["President", "Vice President", "Secretary", "Director", "Assistant Director"];
 
-function CynetTerminal() {
+function team() {
   const groupedProfiles = groupByPosition(profiles);
 
   // Get color class based on position
@@ -155,4 +155,5 @@ function CynetTerminal() {
   );
 }
 
-export default CynetTerminal;
+export default team;
+
